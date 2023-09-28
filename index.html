@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="div-container">
+        <div class="div-robot">
+
+        </div>
+        <div class="div-first">
+                <div>
+                     <button class="button-img-rock" id="rock"><img src="./image/stone.png" alt=""></button>
+                </div>
+                <div>
+                    <button class="button-img-paper" id="paper"><img src="./image/paper.png" alt=""></button>
+                </div>
+                <div>
+                    <button  class="button-img-scissors" id="scissors"><img src="./image/scissors.png" alt=""></button>
+                </div> 
+        </div>
+        <div class="div-play">
+            <p class="play" id="demo">PLAY</p>
+            <button id="but" onclick="rel()">TRY AGAIN</button>
+    
+            
+        </div>
+        <div class="div-second">
+            <div>
+                <button class="button-img-rock" id="myRock" onclick="stone()"><img src="./image/stone.png" alt=""></button>
+           </div>
+           <div>
+               <button class="button-img-paper" id="myPaper" onclick="pap()"><img src="./image/paper.png" alt=""></button>
+           </div>
+           <div>
+               <button  class="button-img-scissors" id="myScissor" onclick="scissor()"><img src="./image/scissors.png" alt=""></button>
+           </div> 
+        </div>
+
+        <div class="div-player">
+            
+        </div>
+    </div>
+    
+    <script>
+        let per = document.getElementById('demo');
+        let ran = document.getElementById('demo1');
+        let rock = document.getElementById("rock");
+        let paper = document.getElementById("paper");
+        let scissors = document.getElementById('scissors');
+        let randomNUmber = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+
+        let random = [rock,paper,scissors,];
+
+        let butt = document.getElementById('but');
+
+        butt.addEventListener('click', function (){
+            location.reload;
+
+        });
+
+        function rel(){
+            location.reload;
+        }
+    
+        function stone() {
+            let first = random[randomNUmber];
+            
+            if(randomNUmber == 2){
+                per.innerHTML = "YOU WIN";
+                first.style.backgroundColor = 'blue'
+                myRock.style.backgroundColor = 'blue'
+            }
+            else if(randomNUmber == 1){
+                per.innerHTML = "YOU LOSE";
+                first.style.backgroundColor = 'red';
+                myRock.style.backgroundColor = 'red'
+            }
+            else if(randomNUmber == 0){
+                per.innerHTML = "DRAW";
+                first.style.backgroundColor = 'yellow';
+                myRock.style.backgroundColor = 'yellow'
+            }
+           
+        }
+
+        function pap() {
+            let second = random[randomNUmber];
+            
+            if(randomNUmber == 0){
+                per.innerHTML = "YOU WIN";
+                second.style.backgroundColor = 'blue'
+                myPaper.style.backgroundColor = 'blue'
+            }
+            else if(randomNUmber == 1){
+                per.innerHTML = "DRAW...TRY AGAIN";
+                second.style.backgroundColor = 'yellow'
+                myPaper.style.backgroundColor = 'yellow'
+
+            }
+            else if(randomNUmber == 2){
+                per.innerHTML = "YOU ARE A LOSER";
+                second.style.backgroundColor = 'red';
+                myPaper.style.backgroundColor = 'red'
+            }
+        }
+
+        function scissor() {
+            let third = random[randomNUmber];
+            
+            if(randomNUmber == 1){
+                per.innerHTML = "YOU WIN";
+                third.style.backgroundColor = 'blue'
+                myScissor.style.backgroundColor = 'blue'
+            }
+            else if(randomNUmber == 2){
+                per.innerHTML = "DRAW";
+                third.style.backgroundColor = 'yellow'
+                myScissor.style.backgroundColor = 'yellow'
+
+            }
+            else if(randomNUmber == 0){
+                per.innerHTML = "FUCKING LOSER";
+                third.style.backgroundColor = 'red';
+                myScissor.style.backgroundColor = 'red'
+            }
+
+        }
+
+
+
+    </script>
+</body>
+</html>

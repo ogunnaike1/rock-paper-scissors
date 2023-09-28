@@ -1,0 +1,113 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.div-container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    background-color:#5c6b73;
+    border-radius: 20px;
+    height: 90vh;
+    margin-top: 5vh;
+
+    .div-robot{
+        width: 20%;
+        text-align: center;
+    }
+
+    .div-first{
+        width: 20%;
+        background-color: #9db4c0;
+
+        .button-img-rock{
+            width: 100%;
+            background-color: #c2dfe3;
+            border: 1px solid #5c6b73;
+            border-radius: 40px;
+            
+            img{
+                width: 100%;
+                height: 171px;
+            }
+        }
+        .button-img-paper{
+            width: 100%;
+            background-color: #c2dfe3;
+            border: 1px solid #5c6b73;
+            border-radius: 40px;
+
+            img{
+                width: 100%;
+                height: 171px;
+            }
+        }
+        .button-img-scissors{
+            width: 100%;
+            background-color: #c2dfe3;
+            border: 1px solid #5c6b73;
+            border-radius: 40px;
+
+            img{
+                width: 100%;
+                height: 171px;
+            }
+          
+          }
+    }
+
+    .div-play{
+        width: 20%;
+        background-color: #e0fbfc;
+        text-align: center;
+
+        .play{
+            font-size: 20px;
+            
+        }
+      }
+      .div-second{
+        width: 20%;
+        transform: rotateY(180deg);
+        background-color: #9db4c0;
+
+        .button-img-rock{
+            width: 100%;
+            background-color: #c2dfe3;
+            border: 1px solid #5c6b73;
+            border-radius: 40px;
+            
+            img{
+                width: 100%;
+                height: 171px;
+            }
+        }
+        .button-img-paper{
+            width: 100%;
+            background-color: #c2dfe3;
+            border: 1px solid #5c6b73;
+            border-radius: 40px;
+
+            img{
+                width: 100%;
+                height: 171px;
+            }
+        }
+        .button-img-scissors{
+            width: 100%;
+            background-color: #c2dfe3;
+            border: 1px solid #5c6b73;
+            border-radius: 40px;
+
+            img{
+                width: 100%;
+                height: 171px;
+            }
+          
+          }
+      }
+      .div-player{
+        width: 20%;
+      }
+}
